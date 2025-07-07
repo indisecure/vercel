@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
-Sitemap: https://www.indisecure.online/sitemap.xml
+Sitemap: https://indisecure.online/sitemap.xml
