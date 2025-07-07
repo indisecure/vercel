@@ -1,49 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?>
-		<!--	created with www.mysitemapgenerator.com	-->
-		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="UTF-8"?>		
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-	<loc>https://www.indisecure.online/</loc>
-	<lastmod>2025-07-05T09:58:09+01:00</lastmod>
+	<loc>https://indisecure.online/</loc>
+	<lastmod>2025-07-07T13:37:14+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://www.indisecure.online/course/</loc>
-	<lastmod>2025-07-05T09:58:09+01:00</lastmod>
+	<loc>https://indisecure.online/course/</loc>
+	<lastmod>2025-07-07T13:37:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://www.indisecure.online/c/</loc>
-	<lastmod>2025-07-05T09:58:09+01:00</lastmod>
+	<loc>https://indisecure.online/c/</loc>
+	<lastmod>2025-07-07T13:37:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://www.indisecure.online/web/</loc>
-	<lastmod>2025-07-05T09:58:09+01:00</lastmod>
+	<loc>https://indisecure.online/web/</loc>
+	<lastmod>2025-07-07T13:37:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://www.indisecure.online/python/</loc>
-	<lastmod>2025-07-05T09:58:09+01:00</lastmod>
+	<loc>https://indisecure.online/python/</loc>
+	<lastmod>2025-07-07T13:37:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://www.indisecure.online/java/</loc>
-	<lastmod>2025-07-05T09:58:09+01:00</lastmod>
+	<loc>https://indisecure.online/java/</loc>
+	<lastmod>2025-07-07T13:37:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://www.indisecure.online/alumni/</loc>
-	<lastmod>2025-07-05T09:58:09+01:00</lastmod>
+	<loc>https://indisecure.online/alumni/</loc>
+	<lastmod>2025-07-07T13:37:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://www.indisecure.online/contact/</loc>
-	<lastmod>2025-07-05T09:58:09+01:00</lastmod>
+	<loc>https://indisecure.online/contact/</loc>
+	<lastmod>2025-07-07T13:37:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://www.indisecure.online/leads/</loc>
-	<lastmod>2025-07-05T09:58:13+01:00</lastmod>
+	<loc>https://indisecure.online/leads/</loc>
+	<lastmod>2025-07-07T13:37:17+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 </urlset>
