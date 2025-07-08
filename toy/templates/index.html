@@ -2,652 +2,285 @@
 {% load static %}
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="PhYOvT23OfsBB8Eijsvj-XJ1zkdZ9IRjDcd2Lggn0j4" />
-    <meta name="keywords" content="java coding classes near me, python coding classes near me, c and c++ coding classes near me, web design coding classes near me, dsa coding classes near me, machine learning coding classes near me, react js coding classes near me, best java coaching classes near me in bhopal, best python coaching classes near me in bhopal, best web design coaching classes near me in bhopal, best dsa coaching classes near me in bhopal, best machine learning coaching classes near me in bhopal, best react js coaching classes near me in bhopal, coding classes in bhopal mp nagar, coding classes in mp nagar bhopal">
-    <meta name="author" content="Indi Secure">
-    <meta name="description" content="c, c++,java,python,php,javascript,web design,dsa,data science,react js">
-    <title>Indi Secure</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
-    <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* Color Variables (based on your Bootstrap usage, for consistency) */
-        :root {
-            --bs-warning-subtle: #fff3cd; /* From Bootstrap's default theme */
-            --bs-primary: #0d6efd;
-            --bs-success: #198754;
-            --bs-dark: #212529;
-            --bs-light: #f8f9fa;
-        }
-
-        body {
-            padding-top: 72px; /* Adjust based on navbar height */
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            background-color: var(--bs-light);
-        }
-
-        /* Navbar Enhancements */
-        .navbar {
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar-brand img {
-            max-width: 100px;
-            height: auto;
-        }
-
-        .navbar-nav .nav-link {
-            font-weight: 500;
-            color: var(--bs-dark) !important;
-            transition: color 0.3s ease;
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: var(--bs-primary) !important;
-        }
-
-        .navbar-nav .nav-link.active {
-            font-weight: 700;
-            color: var(--bs-primary) !important;
-            border-bottom: 2px solid var(--bs-primary);
-            padding-bottom: 5px;
-        }
-
-        .dropdown-menu {
-            border: none;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .dropdown-item {
-            font-weight: 400;
-            transition: background-color 0.2s ease, color 0.2s ease;
-        }
-
-        .dropdown-item:hover {
-            background-color: var(--bs-primary);
-            color: white !important;
-        }
-
-        /* Carousel Enhancements */
-        .carousel {
-            margin-top: 2rem;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .carousel-item img {
-            height: 380px; /* Fixed height for consistency */
-            object-fit: cover; /* Ensures images fill space without distortion, cropping if necessary */
-            width: 100%; /* Ensures images take full width of carousel item */
-            display: block; /* Essential for proper rendering and centering */
-            margin: 0 auto; /* Centers the image horizontally within its container */
-        }
-
-        /* Section Heading Style */
-        .section-heading {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--bs-dark);
-            text-align: center;
-            margin-top: 3rem;
-            margin-bottom: 2.5rem;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-
-        .section-heading::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background-color: var(--bs-primary);
-            margin: 10px auto 0;
-            border-radius: 2px;
-        }
-
-        /* Card Enhancements */
-        .card {
-            border: 1px solid rgba(0, 0, 0, 0.08);
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            overflow: hidden;
-            height: 100%;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .card-img-top {
-            height: 200px;
-            object-fit: cover;
-            border-top-left-radius: 12px;
-            border-top-right-radius: 12px;
-        }
-
-        .card-body {
-            padding: 1.5rem;
-        }
-
-        .card-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--bs-dark);
-            margin-bottom: 0.75rem;
-        }
-
-        .card-text {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            color: #555;
-            margin-bottom: 1.5rem;
-        }
-
-        .card .btn {
-            padding: 10px 25px;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .card .btn-outline-info {
-            color: var(--bs-dark);
-            border-color: var(--bs-primary);
-            background-color: transparent;
-        }
-        .card .btn-outline-info:hover {
-            background-color: var(--bs-primary);
-            color: white !important;
-            border-color: var(--bs-primary);
-        }
-
-        /* Footer Enhancements */
-        .footer-section {
-            background-color: var(--bs-dark);
-            color: white;
-            padding: 3rem 0;
-            margin-top: 5rem;
-            border-top: 5px solid var(--bs-primary);
-        }
-
-        .footer-section h6 {
-            color: white;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-section p, .footer-section a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-        }
-
-        .footer-section a:hover {
-            color: var(--bs-primary) !important;
-            text-decoration: underline;
-        }
-
-        /* Footer Social Icons - FORCE WHITE */
-        .footer-social-icons a {
-            font-size: 1.5rem;
-            color: white !important; /* Forces white color for social icons */
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        .footer-social-icons a:hover {
-            color: var(--bs-primary) !important;
-            transform: translateY(-3px);
-        }
-
-        /* Contact Icons in Footer - FORCE WHITE */
-        .footer-section .fa-home,
-        .footer-section .fa-envelope,
-        .footer-section .fa-phone {
-            color: white !important; /* Forces white color for contact info icons */
-            margin-right: 0.8rem;
-        }
-
-        .footer-copyright {
-            background-color: rgba(0, 0, 0, 0.2);
-            padding: 1rem 0;
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.6);
-        }
-        .footer-copyright a {
-            color: white;
-        }
-        .footer-copyright a:hover {
-             color: var(--bs-primary) !important;
-        }
-
-        /* Back to Top Button */
-        #btn-back-to-top {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            display: none;
-            z-index: 1000;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.2rem;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            background-color: var(--bs-primary);
-            border-color: var(--bs-primary);
-        }
-
-        #btn-back-to-top:hover {
-            background-color: var(--bs-success);
-            border-color: var(--bs-success);
-            transform: scale(1.1);
-        }
-
-        /* Hero Section (Revised for definitive centering) */
-        .hero-section {
-            background: linear-gradient(to right, var(--bs-primary), var(--bs-success));
-            color: white;
-            padding: 5rem 0;
-            border-radius: 12px;
-            margin: 2rem 1rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-        /* Ensure the content itself is centered within the column */
-        .hero-section .container .row .col-lg-10 {
-            text-align: center; /* Explicitly center the text within this column */
-            margin: 0 auto; /* Ensures the column itself is centered if it doesn't take full row width */
-            float: none; /* Counteract any potential float if present */
-        }
-        /* Ensure the row centers its contents horizontally */
-        .hero-section .container .row {
-            justify-content: center; /* Centers the columns within the row using flexbox */
-        }
-
-        .hero-section h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        .hero-section p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 2rem auto;
-            opacity: 0.9;
-        }
-        .hero-section .btn {
-            font-size: 1.1rem;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        .hero-section .btn-light {
-            background-color: white;
-            color: var(--bs-primary);
-        }
-        .hero-section .btn-light:hover {
-            background-color: var(--bs-dark);
-            color: white;
-            border-color: var(--bs-dark);
-            transform: translateY(-3px);
-        }
-        .hero-section .btn-outline-light {
-            border-color: white;
-            color: white;
-        }
-        .hero-section .btn-outline-light:hover {
-            background-color: white;
-            color: var(--bs-primary);
-            transform: translateY(-3px);
-        }
-
-        /* Call to Action Section */
-        .cta-section {
-            background-color: var(--bs-warning-subtle);
-            padding: 4rem 0;
-            text-align: center;
-            margin: 4rem 0;
-            border-top: 1px solid rgba(0,0,0,0.05);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-        .cta-section h2 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--bs-dark);
-            margin-bottom: 1.5rem;
-        }
-        .cta-section p {
-            font-size: 1.1rem;
-            color: #444;
-            margin-bottom: 2.5rem;
-        }
-        .cta-section .btn {
-            font-size: 1.1rem;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            background-color: var(--bs-primary);
-            border-color: var(--bs-primary);
-            color: white;
-            transition: all 0.3s ease;
-        }
-        .cta-section .btn:hover {
-            background-color: var(--bs-success);
-            border-color: var(--bs-success);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-        }
-
-        /* Small Screen Adjustments */
-        @media (max-width: 768px) {
-            .navbar-brand img {
-                max-width: 80px;
-            }
-            .hero-section {
-                padding: 3rem 0;
-                margin: 1rem 0.5rem;
-            }
-            .hero-section h1 {
-                font-size: 2.2rem;
-            }
-            .hero-section p {
-                font-size: 1rem;
-            }
-            .hero-section .btn {
-                font-size: 0.9rem;
-                padding: 10px 20px;
-            }
-            .carousel-item img {
-                height: 250px; /* Shorter height on mobile */
-            }
-            .section-heading {
-                font-size: 1.8rem;
-                margin-top: 2rem;
-                margin-bottom: 1.5rem;
-            }
-            .card-title {
-                font-size: 1.3rem;
-            }
-            .card-text {
-                font-size: 0.85rem;
-            }
-            .cta-section h2 {
-                font-size: 1.8rem;
-            }
-            .cta-section p {
-                font-size: 0.95rem;
-            }
-            .footer-social-icons div {
-                text-align: center;
-                margin-top: 1rem;
-            }
-            .footer-section .col-md-3, .col-md-2, .col-md-4 {
-                margin-bottom: 2rem;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <meta name="google-site-verification" content="PhYOvT23OfsBB8Eijsvj-XJ1zkdZ9IRjDcd2Lggn0j4" />
+  <meta name="keywords"
+		content="java coding classes near me ,python coding classes near me,c and c++ coding classes near me,web design coding classes near me ,dsa coding classes near me,machine learning coding classes near me,react js coding classes near me,best java coaching classes near me in bhopal,best python coaching classes near me in bhopal,best web design coaching classes near me in bhopal, best dsa coaching classes near me in bhopal,best machine learning coaching classes near me in bhopal,best react js coaching classes near me in bhopal,coding classes in bhopal mp nagar,coding classes in mp nagar  bhopal">
+  <meta name="author" content="Indi Secure">
+  <meta name="description" content="c, c++,java,python,php,javascript,web design,dsa,data science,react js">
+  <title>indi secure</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="apple-touch-icon" sizes="180x180" href=" {% static 'favicon/apple-touch-icon.png' %} ">
+  <link rel="icon" type="image/png" sizes="32x32" href=" {% static 'favicon/favicon-32x32.png' %} ">
+  <link rel="icon" type="image/png" sizes="16x16" href=" {% static 'favicon/favicon-16x16.png' %} ">
+  <link rel="manifest" href=" {% static 'favicon/site.webmanifest' %} ">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <style>
+	#btn-back-to-top {
+      position: fixed;
+      bottom: 15px;
+      right: 5px;
+      display: none;
+    }
+  </style>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-warning-subtle fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'indi.png' %}" alt="Indi Secure Logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Courses
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{% url 'course' %}">Full List of Courses</a></li>
-                            <li><a class="dropdown-item" href="{% url 'c' %}">C & C++</a></li>
-                            <li><a class="dropdown-item" href="{% url 'web' %}">Web-Design</a></li>
-                            <li><a class="dropdown-item" href="{% url 'python' %}">Python</a></li>
-                            <li><a class="dropdown-item" href="{% url 'java' %}">Java</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'alumni' %}">Alumni</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <section class="hero-section container">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <h1>Unlock Your Coding Potential with Indi Secure</h1>
-                <p>
-                    Your premier destination for practical-oriented programming education in Bhopal. Master the skills demanded by today's tech industry.
-                </p>
-                <div class="mt-4">
-                    <a href="{% url 'course' %}" class="btn btn-light btn-lg me-3">Explore Courses</a>
-                    <a href="{% url 'contact' %}" class="btn btn-outline-light btn-lg">Get in Touch</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="container my-5">
-        <h2 class="section-heading">Popular Courses</h2>
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{% static 'web.webp' %}" class="d-block" alt="Web Design Course" loading="lazy">
-                </div>
-                <div class="carousel-item">
-                    <img src="{% static 'py.png' %}" class="d-block" alt="Python Course" loading="lazy">
-                </div>
-                <div class="carousel-item">
-                    <img src="{% static 'javascript.png' %}" class="d-block" alt="JavaScript Course" loading="lazy">
-                </div>
-                <div class="carousel-item">
-                    <img src="{% static 'jvm.png' %}" class="d-block" alt="Java Course" loading="lazy">
-                </div>
-                <div class="carousel-item">
-                    <img src="{% static 'ccpp.png' %}" class="d-block" alt="C & C++ Course" loading="lazy">
-                </div>
-                <div class="carousel-item">
-                    <img src="{% static 'react.webp' %}" class="d-block" alt="React JS Course" loading="lazy">
-                </div>
-            </div>
-             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+<body >
+  <nav class="navbar navbar-expand-lg bg-warning-subtle fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'home' %}"><img src=" {% static 'indi.png' %} " alt="indi" width='15%'></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active text-bg-light" aria-current="page" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-bg-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Courses
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item text-success" href=" {% url 'course' %}">Full List of Courses</a></li>
+              <li><a class="dropdown-item text-primary" href=" {% url 'c' %}">C &amp; C++</a></li>
+              <li><a class="dropdown-item text-success" href="{% url 'web' %}">Web-Design</a></li>
+              <li><a class="dropdown-item text-dark" href="{% url 'python' %}">Python</a></li>
+              <li><a class="dropdown-item text-primary" href="{% url 'java' %}">Java</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-bg-light" href="{% url 'alumni' %}" >Alumni</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-bg-light" href=" {% url 'contact' %}" >Contact Us</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav><br><br>
+    <!-- Carousel-->
 
-    <div class="container my-5">
-        <h2 class="section-heading">Our Core Offerings</h2>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-            <div class="col">
-                <div class="card">
-                    <img src="{% static 'cpp.png' %}" class="card-img-top" alt="C/C++ Course Image" loading="lazy"/>
-                    <div class="card-body">
-                        <h5 class="card-title">C/C++</h5>
-                        <p class="card-text">
-                            Foundational languages for system programming, game development, and high-performance applications. Build strong logical foundations.
-                        </p>
-                        <a href="{% url 'c' %}" class="btn btn-outline-info">Get Syllabus</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="{% static 'w.png' %}" class="card-img-top" alt="Web-Design Course Image" loading="lazy"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Web Design</h5>
-                        <p class="card-text">
-                            Master HTML, CSS, and JavaScript to create responsive, interactive, and visually appealing websites. Become a frontend expert.
-                        </p>
-                        <a href="{% url 'web' %}" class="btn btn-outline-info">Get Syllabus</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="{% static 'p.png' %}" class="card-img-top" alt="Python Course Image" loading="lazy"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Python</h5>
-                        <p class="card-text">
-                            Explore Python for web development, data science, machine learning, and automation. A versatile language for modern applications.
-                        </p>
-                        <a href="{% url 'python' %}" class="btn btn-outline-info">Get Syllabus</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="{% static 'j.png' %}" class="card-img-top" alt="Java Course Image" loading="lazy"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Java</h5>
-                        <p class="card-text">
-                            Become proficient in Java for building robust backend systems, Android applications, and enterprise software. In-demand across industries.
-                        </p>
-                        <a href="{% url 'java' %}" class="btn btn-outline-info">Get Syllabus</a>
-                    </div>
-                </div>
-            </div>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner mt-3">
+        <div class="carousel-item active">
+          <img src=" {% static 'web.webp' %}" class="d-block w-100" alt="Web" height='375' >
         </div>
-        <div class="text-center mt-5">
-            <a href="{% url 'course' %}" class="btn btn-lg btn-primary">View All Courses <i class="fas fa-arrow-right ms-2"></i></a>
+        <div class="carousel-item">
+          <img src="{% static 'py.png' %}" class="d-block w-100" alt="Python" height='375'>
         </div>
+        <div class="carousel-item">
+          <img src="{% static 'javascript.png' %}" class="d-block w-100" alt="JavaScript" height='375'>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'jvm.png' %}" class="d-block w-100" alt="Java" height='375'>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'ccpp.png' %}" class="d-block w-100" alt="c&amp;c++" height='375'>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'react.webp' %}" class="d-block w-100" alt="React" height='375'>
+        </div>
+      </div>
     </div>
+ <!-- Cards-->
+ <div class="row row-cols-1 row-cols-md-4 g-4 m-1">
+  <div class="col">
+    <div class="card">
+      <img src="{% static 'cpp.png' %}" class="card-img-top" alt="c/c++"/>
+      <div class="card-body">
+        <h5 class="card-title">C/C++</h5>
+        <p class="card-text">
+          C and C++ are programming languages that can be used for developing applications such as game development, GUI applications, operating system, databases, etc. C is POP based programming language.</p>
+        <a href="{% url 'c' %}" class="btn btn-outline-info text-black bg-warning-subtle" >Get Syllabus</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="{% static 'w.png' %}"  class="card-img-top" alt="web-design" />
+      <div class="card-body">
+        <h5 class="card-title">Web-Design </h5>
+        <p class="card-text">
+          HTML, CSS, and JavaScript are three separate languages that work together to create web pages and web applications.Websites have an array of elements presented in ways that make them easy to navigate.
+        </p>
+        <a href="{% url 'web' %}" class="btn btn-outline-info text-black bg-warning-subtle" >Get Syllabus</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="{% static 'p.png' %}" class="card-img-top" alt="java"/>
+      <div class="card-body">
+        <h5 class="card-title">Python</h5>
+        <p class="card-text">Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Its high-level built in data structures, combined with dynamic typing and dynamic binding.</p>
+        <a href="{% url 'python' %}" class="btn btn-outline-info text-black bg-warning-subtle" >Get Syllabus</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="{% static 'j.png'%}" class="card-img-top" alt="python"/>
+      <div class="card-body">
+        <h5 class="card-title">Java</h5>
+        <p class="card-text">Java is a widely-used programming language for coding web applications. It has been a popular choice among developers for over two decades, with millions of Java applications in use today.</p>
+          <a href="{% url 'java' %}" class="btn btn-outline-info text-black bg-warning-subtle" >Get Syllabus</a>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-white text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
 
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Transform Your Career?</h2>
-            <p>Join Indi Secure and gain the practical skills needed to thrive in the competitive tech world. Enroll today!</p>
-            <a href="{% url 'contact' %}" class="btn btn-primary">Enroll Now!</a>
-        </div>
+      <!-- Right -->
+      <div>
+        <a href="https://www.facebook.com/" class="me-4 text-reset">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/login" class="me-4 text-reset">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.google.com/" class="me-4 text-reset">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="https://www.instagram.com/?hl=en" class="me-4 text-reset">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://in.linkedin.com/" class="me-4 text-reset">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/" class="me-4 text-reset">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
     </section>
+    <!-- Section: Social media -->
 
-    <footer class="text-center text-lg-start footer-section">
-        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom footer-social-icons">
-            <div class="me-5 d-none d-lg-block">
-                <span>Get connected with us on social networks:</span>
-            </div>
-            <div>
-                <a href="https://www.facebook.com/" class="me-4" aria-label="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://twitter.com/login" class="me-4" aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://www.google.com/" class="me-4" aria-label="Google">
-                    <i class="fab fa-google"></i>
-                </a>
-                <a href="https://www.instagram.com/?hl=en" class="me-4" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://in.linkedin.com/" class="me-4" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/" class="me-4" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-        </section>
-        <section class="mt-4">
-            <div class="container text-center text-md-start">
-                <div class="row mt-3">
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="fas fa-gem me-3"></i>INDI SECURE
-                        </h6>
-                        <p>
-                            A 100% Practical Oriented Programming Learning Center, dedicated to building your successful career in technology.
-                        </p>
-                    </div>
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <h6 class="text-uppercase fw-bold mb-4">Industry Essentials</h6>
-                        <p><a href="{% url 'course' %}" class="text-reset">Docker</a></p>
-                        <p><a href="{% url 'course' %}" class="text-reset">React JS</a></p>
-                        <p><a href="{% url 'course' %}" class="text-reset">Git & GitHub</a></p>
-                        <p><a href="{% url 'course' %}" class="text-reset">Node JS</a></p>
-                    </div>
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <h6 class="text-uppercase fw-bold mb-4">Most Popular Courses</h6>
-                        <p><a href="{% url 'c' %}" class="text-reset">C/C++</a></p>
-                        <p><a href="{% url 'web' %}" class="text-reset">Web-Design</a></p>
-                        <p><a href="{% url 'python' %}" class="text-reset">Python</a></p>
-                        <p><a href="{% url 'java' %}" class="text-reset">Java</a></p>
-                    </div>
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                        <p><i class="fas fa-home me-3"></i> Plot # 9, MP Nagar Zone-1, Bhopal-462011</p>
-                        <p><i class="fas fa-envelope me-3"></i> indi.bhopal@gmail.com</p>
-                        <p><i class="fas fa-phone me-3"></i> +91 8839331601</p>
-                        <p><i class="fas fa-phone me-3"></i> +91 9223504014</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="text-center p-4 footer-copyright">
-            © 2023 Copyright:
-            <a class="fw-bold" href="https://indisecure.online/">INDI SECURE</a>
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>INDI SECURE
+            </h6>
+            <p>
+              An 100 % Practical Oriented Programming Learning Center
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Industry Essentials
+            </h6>
+            <p>
+              <a href="{% url 'course' %}" class="text-reset">Docker</a>
+            </p>
+            <p>
+              <a href="{% url 'course' %}" class="text-reset">React JS</a>
+            </p>
+            <p>
+              <a href="{% url 'course' %}" class="text-reset">Git &amp; GitHub</a>
+            </p>
+            <p>
+              <a href="{% url 'course' %}" class="text-reset">Node JS</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+             Most Popular Courses
+            </h6>
+            <p>
+              <a href="{% url 'c' %}" class="text-reset">C/C++</a>
+            </p>
+            <p>
+              <a href="{% url 'web' %}" class="text-reset">Web-Design</a>
+            </p>
+            <p>
+              <a href="{% url 'python' %}" class="text-reset">Python</a>
+            </p>
+            <p>
+              <a href="{% url 'java' %}" class="text-reset">Java</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3"></i>
+              Plot # 9, MP Nagar Zone-1, Bhopal-462011</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              indi.bhopal@gmail.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> +91 8839331601</p>
+            <p><i class="fas fa-phone me-3"></i> +91 9223504014</p>
+          </div>
+          <!-- Grid column -->
         </div>
-    </footer>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
 
-    <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-    <script>
-        let mybutton = document.getElementById("btn-back-to-top");
-        window.onscroll = function () {
-            scrollFunction();
-        };
-        function scrollFunction() {
-            if (
-                document.body.scrollTop > 20 ||
-                document.documentElement.scrollTop > 20
-            ) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
-        mybutton.addEventListener("click", backToTop);
-        function backToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+    <!-- Copyright -->
+    <div class="text-center p-4 bg-warning-subtle" >
+      © 2023 Copyright:
+      <a class="text-reset fw-bold" href="https://indisecure.online/">INDI SECURE</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+ <button type="button" class="btn btn-danger btn-floating btn-lg " id="btn-back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  <script>
 
-        var myCarousel = document.querySelector('#carouselExampleSlidesOnly');
-        if (myCarousel) {
-            var carousel = new bootstrap.Carousel(myCarousel, {
-                interval: 4000,
-                pause: 'hover'
-            });
-        }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
+    let mybutton = document.getElementById("btn-back-to-top");
+    window.onscroll = function () {
+      scrollFunction();
+    };
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    mybutton.addEventListener("click", backToTop);
+    function backToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
